@@ -19,7 +19,7 @@ if (!process.env.WALLET_ADDRESS || process.env.WALLET_ADDRESS === "") {
 
 // use alchemy as provider
 const provider = new ethers.providers.JsonRpcProvider(process.env.ALCHEMY_API_URL);
-const wallet = new ethers.Wallet(process.env.WALLET_ADDRESS, provider);
+const wallet = new ethers.Wallet(process.env.PRIVATE_KEY, provider);
 const sdk = new ThirdwebSDK(wallet);
 
 (async () => {
